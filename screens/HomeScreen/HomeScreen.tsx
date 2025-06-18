@@ -1,27 +1,21 @@
 import { View, Text } from 'react-native';
-import DigitBox from "../../components/DigitBox/DigitBox";
 import {styles} from "./styles";
-import SummaryCard from "../../components/SummaryCard/SummaryCard";
+import ProgressCard from "../../components/HomeScreen/ProgressCard/ProgressCard";
+import SummaryCard from "../../components/HomeScreen/SummaryCard/SummaryCard";
+import LoyaltyCodeCard from "../../components/HomeScreen/LoyaltyCodeCard/LoyaltyCodeCard";
+import WelcomeCard from "../../components/HomeScreen/WelcomeCard/WelcomeCard";
 
 export default function HomeScreen(){
-    return(
-        <View style={{ flex: 1, margin: '5%' }}>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>You have a free reward ready to redeem</Text>
-            </View>
-            <View style={styles.digitsContainer}>
-                <DigitBox digit={'3'} />
-                <DigitBox digit={'7'} />
-                <DigitBox digit={'0'} />
-                <DigitBox digit={'6'} />
-                <DigitBox digit={'8'} />
-            </View>
-            <View style={{alignItems: 'center', backgroundColor: '#FF0000'}}>
-                <Text style={{ fontSize: 16 }}>Show this code to the cafe to earn stamps</Text>
-            </View>
-            <View style={styles.summaryContainer}>
-                <SummaryCard title={"Total Stamps"} count={"12"}/>
-                <SummaryCard title={"Total Rewards"} count={"1"}/>
+    return (
+        <View style={styles.background}>
+            <View style={styles.container}>
+                <WelcomeCard />
+                <LoyaltyCodeCard />
+                <ProgressCard />
+                <View style={styles.summary_cards_container}>
+                    <SummaryCard header={'Active Schemes'} count={'5'} subText={'Tap to view all cards now'} />
+                    <SummaryCard header={'Rewards Ready!'} count={'1'} subText={'Tap to redeem now'} />
+                </View>
             </View>
         </View>
     );

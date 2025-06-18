@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from "../../screens/HomeScreen/HomeScreen";
 import RewardsScreen from "../../screens/RewardsScreen";
-import LoyaltyCardsScreen from "../../screens/LoyaltyCardsScreen";
+import LoyaltyCardsScreen from "../../screens/LoyaltyCardsScreen/LoyaltyCardsScreen";
 import AccountScreen from "../../screens/AccountScreen";
 import ExploreScreen from "../../screens/ExploreScreen";
 
@@ -15,7 +15,7 @@ export default function BottomNavigationBar(){
             initialRouteName={"Home"}
             screenOptions={({ route }) => ({
                     headerShown: false,
-                    tabBarActiveTintColor: '#4F46E5',
+                    tabBarActiveTintColor: '#B8902A',
                     tabBarInactiveTintColor: '#888',
                     tabBarIcon: ({ color, size }) => {
                         let iconName: string = 'home';
